@@ -18,3 +18,4 @@ export class AppComponent implements OnInit{
     return produit.promo;
   }
 }
+//gitAll pour afficher tout les produits

@@ -8,7 +8,8 @@ export function createProduct():SimpleProduct{
         id:faker.datatype.uuid(),
         name:faker.commerce.productName(),
         description:faker.commerce.productDescription(),
-        image:faker.image.imageUrl(640,480,'technics',true),
+       // se sont tous des images personnes  image:faker.image.avatar(),
+        image:faker.image.imageUrl(640,480,'fashion',true),//fashion est obsolete utilise technics
         price:faker.commerce.price(100,200,2),
         category:faker.commerce.department(),
         promo:hasPromo,

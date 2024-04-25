@@ -1,17 +1,17 @@
 <div class="grid-container">
-  <div class="grid-item">
+  <div class="grid-item" *ngFor="let prd of produits;">
     <div [class.product-card]="true">
-      <img [src]="produit.image" [alt]="produit.name">
+      <img [src]="prd.image" [alt]="prd.name">
       <div class="product-card-body">
         <h3 class="product-card-title">
-          {{produit.name}}
+          {{prd.name}}
         </h3>
         <p class="product-card-description"></p>
-        <span *ngIf="isPromo(produit);else noPromo" class="promo-badge">Promo: {{produit.promoVal}}% off</span>
+        <span *ngIf="isPromo(prd);else noPromo" class="promo-badge">Promo: {{prd.promoVal}}% off</span>
         <ng-template #noPromo>
           <span>noPromo</span>
         </ng-template>
-        <span class="product-card-price">{{produit.price}}CFA</span>
+        <span class="product-card-price">{{prd.price}} CFA</span>
       </div>
     </div>
   </div>
