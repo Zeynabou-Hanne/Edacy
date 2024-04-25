@@ -7,7 +7,9 @@ import { createProduct, createProducts } from './donnees/produit.generator';
   styleUrl: './app.component.css'
 })
 export class AppComponent implements OnInit{
-  produits!:SimpleProduct[];//fais moi confiance je vais mettre quelque chose dedans
+  public produits!:SimpleProduct[];//fais moi confiance je vais mettre quelque chose dedans
+  public produit!:SimpleProduct;
+  constructor(){}
   //Avant de demarrer fais ceci
   ngOnInit(): void {
     this.produits=createProducts();
