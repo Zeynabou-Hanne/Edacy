@@ -17,5 +17,9 @@ export class AppComponent implements OnInit{
   isPromo(produit:SimpleProduct):boolean{
     return produit.promo;
   }
+  addToCart(prod: SimpleProduct){
+    console.log(prod);
+  }
 }
+
 //gitAll pour afficher tout les produits
