@@ -1,7 +1,7 @@
 <div class="grid-container">
   <div class="grid-item">
-    <div class="product-card">
-      <img src="{{produit.name}}" alt="">
+    <div [class.product-card]="true">
+      <img [src]="produit.image" [alt]="produit.name">
       <div class="product-card-body">
         <h3 class="product-card-title">
           {{produit.name}}
