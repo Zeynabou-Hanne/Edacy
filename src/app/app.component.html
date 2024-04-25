@@ -7,7 +7,10 @@
           {{produit.name}}
         </h3>
         <p class="product-card-description"></p>
-        <span class="promo-badge">Promo: {{produit.promoVal}}% off</span>
+        <span *ngIf="isPromo(produit);else noPromo" class="promo-badge">Promo: {{produit.promoVal}}% off</span>
+        <ng-template #noPromo>
+          <span>noPromo</span>
+        </ng-template>
         <span class="product-card-price">{{produit.price}}CFA</span>
       </div>
     </div>

@@ -12,7 +12,9 @@ export class AppComponent implements OnInit{
   constructor(){}
   //Avant de demarrer fais ceci
   ngOnInit(): void {
-    this.produits=createProducts();
-    console.log(this.produits)
+    this.produits=createProducts(16);
+  }
+  isPromo(produit:SimpleProduct):boolean{
+    return produit.promo;
   }
 }
