@@ -9,11 +9,13 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class SearchComponent implements OnInit{
    @Input() placeholderMessage!:string; //ecoute des messages
-   @Output() searched:EventEmitter<string>=new EventEmitter();//nouvelle liason d'evenement
+   @Output() searched:EventEmitter<string>=new EventEmitter();//nouvelle liason d'evenement,transfer un message
   constructor(){}
   //Avant de demarrer fais ceci
   ngOnInit(): void {}
   searchanged(ev:any){
-    console.log(ev.target.value);
+    const text:string=ev.target.value;
+    this.searched.emit(text);
   }
+ 
 }
