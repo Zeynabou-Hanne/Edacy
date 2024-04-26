@@ -1,3 +1,5 @@
+<app-search [placeholderMessage]="message">
+</app-search>
 <div class="grid-container">
   <div class="grid-item" *ngFor="let prd of produits;">
     <div [class.product-card]="true">
@@ -12,7 +14,7 @@
           <span>noPromo</span>
         </ng-template>
         <span class="product-card-price">{{prd.price}} CFA</span>
-        <button (click)="addToCart(prd)">+ Panier</button>
+        <button (click)="addToCart($event)">+ Panier</button>
       </div>
     </div>
   </div>

@@ -9,6 +9,7 @@ import { createProduct, createProducts } from './donnees/produit.generator';
 export class AppComponent implements OnInit{
   public produits!:SimpleProduct[];//fais moi confiance je vais mettre quelque chose dedans
   public produit!:SimpleProduct;
+  public message = 'Acceuil - Rcherche'
   constructor(){}
   //Avant de demarrer fais ceci
   ngOnInit(): void {
@@ -17,8 +18,8 @@ export class AppComponent implements OnInit{
   isPromo(produit:SimpleProduct):boolean{
     return produit.promo;
   }
-  addToCart(prod: SimpleProduct){
-    console.log(prod);
+  addToCart(ev: any){
+    console.log();
   }
 }
 
