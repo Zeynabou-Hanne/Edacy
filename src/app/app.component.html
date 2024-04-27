@@ -8,14 +8,13 @@
         <h3 class="product-card-title">
           {{prd.name}}
         </h3>
-        ((pr))
         <p class="product-card-description"></p>
         <span *ngIf="isPromo(prd);else noPromo" class="promo-badge">Promo: {{prd.promoVal}}% off</span>
         <ng-template #noPromo>
           <span>noPromo</span>
         </ng-template>
         <span class="product-card-price">{{prd.price}} CFA</span>
-        <button (click)="addToCart($event)">+ Panier</button>
+        <app-resuable-buttons (buttonClicked)="addToCart(prd)"></app-resuable-buttons>
       </div>
     </div>
   </div>

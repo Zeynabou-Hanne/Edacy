@@ -30,7 +30,7 @@ export class AppComponent implements OnInit{
   }
   private handleFiltering(t:string){
     if(t==null || !t.length){
-      //54:48
+      this.produits=this.productCache;
     }
     this.produits=this.productCache.filter((_produit)=> _produit.name.includes(t));
   }
