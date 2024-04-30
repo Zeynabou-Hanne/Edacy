@@ -21,8 +21,8 @@ export class AppComponent implements OnInit{
   public isPromo(produit:SimpleProduct):boolean{
     return produit.promo;
   }
-  public addToCart(ev: any){
-    console.log();
+  public addToCart(prod:SimpleProduct){
+    console.log(prod);
   }
   public filtrerProduits(text:string){
     this.handleFiltering(text);

@@ -1,0 +1,9 @@
+<button @btn
+[ngClass]="{
+    principal: isPrincipal,
+    secondaire: isSecondary,
+}"
+(click)="clicked()">
+    Notre boutton ici
+</button>
+<ng-content></ng-content>

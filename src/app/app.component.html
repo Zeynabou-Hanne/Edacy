@@ -13,8 +13,12 @@
         <ng-template #noPromo>
           <span>noPromo</span>
         </ng-template>
-        <span class="product-card-price">{{prd.price}} CFA</span>
-        <app-resuable-buttons (buttonClicked)="addToCart(prd)"></app-resuable-buttons>
+        <span class="product-card-price">
+          {{prd.price}} CFA
+        </span>
+        <app-resuable-buttons [isPrincipal]="true" (buttonClicked)="addToCart(prd)">
+          *projection
+        </app-resuable-buttons>
       </div>
     </div>
   </div>

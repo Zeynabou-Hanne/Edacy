@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Output, output } from '@angular/core';
+import { Component, EventEmitter, Input, Output, output } from '@angular/core';
 
 @Component({
   selector: 'app-resuable-buttons',
@@ -7,9 +7,9 @@ import { Component, EventEmitter, Output, output } from '@angular/core';
 })
 export class ResuableButtonsComponent {
 @Output() buttonClicked:EventEmitter<any>= new EventEmitter();
-
+@Input() isPrincipal!:boolean;
+@Input() isSecondary!:boolean;
 clicked(){
   this.buttonClicked
 }
 }
-//1.11.14
